@@ -430,7 +430,7 @@ window.addEventListener("map:init", function (event) {
 				var icon = null;
 				if (p.photos != ""){ var icon = "camera" };
                 
-                var icon = L.MakiMarkers.icon({icon:icon,color:"#555555",size:"s"});
+                var icon = L.MakiMarkers.icon({icon:icon,color:"#555555",size:"s",data:{stairid:p.stairid}});
                 var marker = new L.Marker(new L.LatLng(p.coords_y, p.coords_x),{icon:icon,riseonhover:true});
                 marker.bindPopup(popup);
                 
